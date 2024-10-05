@@ -45,6 +45,10 @@ class LinkedList:
         else:
             while current:
                 temp = current.next
+                current.next = prev
+                prev = current
+                current = temp
+            self.head = prev
                 
             
             
@@ -56,3 +60,8 @@ list1.addNodetoFront(1)
 list1.addNodetoEnd(2)
 list1.addNodetoEnd(3)
 list1.print_list()
+
+list1.reverse_List()
+list1.print_list()
+
+
